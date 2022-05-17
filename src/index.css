@@ -1,0 +1,168 @@
+.mega-menu {
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  z-index: 99;
+  position: relative;
+  box-sizing: border-box;
+}
+.mega-menu_nav {
+  max-width: 1366px;
+  padding: 0 40px;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
+  .mega-menu_nav {
+    padding: 0 10px;
+  }
+}
+.mega-menu_nav-list {
+  background-color: initial;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .mm-noscroll .mega-menu_nav-list {
+    overflow-x: hidden;
+  }
+}
+.mega-menu_nav-list-item + .mega-menu_nav-list-item {
+  margin-left: 30px;
+}
+.mega-menu_nav-heading {
+  color: #4a4c49;
+  box-sizing: content-box;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 22px;
+  padding: 8px 2px;
+  height: 22px;
+  white-space: nowrap;
+}
+.mega-menu_nav-heading:hover,
+.active .mega-menu_nav-heading {
+  color: #af231c;
+  border-bottom: 2px solid #af231c;
+  height: 20px;
+}
+.mega-menu_nav-heading--mobile {
+  display: none;
+  color: #af231c;
+  font-weight: 600;
+  margin: 24px auto 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+@media screen and (max-width: 600px) {
+  .mega-menu_nav-heading--mobile {
+    display: block;
+  }
+}
+.mega-menu_dialog {
+  background: #fff;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .mega-menu_dialog {
+    padding: 0 40px;
+    height: calc(100vh - 110px);
+    width: 300px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.mega-menu_dialog-list {
+  min-height: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 24px 40px 48px;
+  max-width: 1366px;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
+  .mega-menu_dialog-list {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 24px 0 48px;
+  }
+}
+.mega-menu_dialog-list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.mega-menu_dialog-list-item + .mega-menu_dialog-list-item {
+  margin-left: 64px;
+}
+@media screen and (max-width: 600px) {
+  .mega-menu_dialog-list-item + .mega-menu_dialog-list-item {
+    margin: 32px 0 0 0;
+  }
+}
+.mega-menu_dialog-heading {
+  color: #4a4c49;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 6px 0px;
+}
+@media screen and (max-width: 1200px) {
+  .mega-menu_dialog-heading {
+    font-size: 16px;
+  }
+}
+.mega-menu_dialog-link {
+  color: #4a4c49;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .mega-menu_dialog-link {
+    font-size: 14px;
+  }
+}
+
+.dialog-box-overlay {
+  border-top: 1px solid #f1f1f1;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100vw;
+}
+.active .dialog-box-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .mm-noscroll {
+    height: 100%;
+    overflow-y: hidden;
+  }
+}
